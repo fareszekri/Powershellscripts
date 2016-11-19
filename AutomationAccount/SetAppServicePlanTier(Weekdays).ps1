@@ -1,4 +1,18 @@
-﻿Param(
+<#
+    .DESCRIPTION
+        Used within Automation Account to automate Switching the App Service Plan to the required Tier during working week days.
+        Used with the below schedule :
+             - Everyday 8 am : [Tier = Standard] ; Everyday 7 pm : [Tier = Free] ; if day = weekend skip execution/
+       you will habe 
+        * Monday - Friday ( 8am to 7pm) : Standard 
+        * Free tier for the rest 
+
+    .NOTES
+        AUTHOR: Fares Zekri
+        LASTEDIT: Nov 19th, 2016
+#>
+
+Param(
  [Parameter (Mandatory= $true)]
  [string]$Tier,
  [Parameter (Mandatory= $true)]
